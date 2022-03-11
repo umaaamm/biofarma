@@ -1,0 +1,158 @@
+.Login {
+    background-color: #61dafb;
+}
+
+.Login-logo {
+    position: absolute;
+    width: 192px;
+    height: 49px;
+    left: 156px;
+    top: 29px;
+}
+
+.Login-header {
+    position: absolute;
+    width: 100%;
+    height: 106px;
+    left: calc(50% - 100%/2);
+    top: 0px;
+    background: #FFFFFF;
+}
+
+.Login-container {
+    position: absolute;
+    width: 100%;
+    height: 623px;
+    left: 0px;
+    top: 106px;
+    background: #EF5734;
+}
+
+.Login-form {
+    position: absolute;
+    width: 360px;
+    height: 563px;
+    right: 156px;
+    /* left: 924px; */
+    bottom: 30px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
+
+.Login-img-content {
+    position: absolute;
+    width: 552px;
+    height: 139px;
+    left: 252px;
+    top: 242px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.Login-label-login {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    width: 49px;
+    height: 27px;
+    left: calc(50% - 49px/2 - 139.5px);
+    top: 30px;
+}
+
+.Login-lewati {
+    /* form-button-skip */
+    position: absolute;
+    width: 100px;
+    height: 24px;
+    left: 130px;
+    top: 509px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    text-align: center;
+    /* Red */
+    color: #EF5734;
+}
+
+.form-text-input-user {
+    position: absolute;
+    width: 320px;
+    height: 48px;
+    left: 20px;
+    top: 150px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.form-text-input-password {
+    position: absolute;
+    width: 320px;
+    height: 48px;
+    left: 20px;
+    top: 253px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.form-button {
+    position: absolute;
+    width: 320px;
+    height: 48px;
+    left: calc(50% - 320px/2);
+    top: 381px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    /* Gray 4 */
+    color: white;
+    background: #BDBDBD;
+    border-radius: 6px;
+}
+
+.label-text-user {
+    /* form-text-email */
+    position: absolute;
+    width: 44px;
+    height: 24px;
+    left: calc(50% - 44px/2 - 138px);
+    top: 117px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    /* Black */
+    color: #3D3D3D;
+}
+
+.label-text-password {
+    position: absolute;
+    width: 79px;
+    height: 24px;
+    left: calc(50% - 79px/2 - 120.5px);
+    top: 219px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    /* Black */
+    color: #3D3D3D;
+}
