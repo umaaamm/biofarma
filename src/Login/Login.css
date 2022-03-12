@@ -1,8 +1,8 @@
-.Login {
+.login {
     background-color: #61dafb;
 }
 
-.Login-logo {
+.login-logo {
     position: absolute;
     width: 192px;
     height: 49px;
@@ -10,47 +10,43 @@
     top: 29px;
 }
 
-.Login-header {
-    position: absolute;
+.login-header {
+    position: relative;
     width: 100%;
     height: 106px;
-    left: calc(50% - 100%/2);
-    top: 0px;
     background: #FFFFFF;
 }
 
-.Login-container {
-    position: absolute;
-    width: 100%;
-    height: 623px;
-    left: 0px;
-    top: 106px;
+.login-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
     background: #EF5734;
+    height: 90vh;
 }
 
-.Login-form {
-    position: absolute;
+.login-form {
+    position: relative;
     width: 360px;
     height: 563px;
-    right: 156px;
-    /* left: 924px; */
-    bottom: 30px;
-    top: 30px;
     background: #FFFFFF;
     border-radius: 6px;
+    margin: 60px 60px;
+    padding: 24px 30px;
 }
 
-.Login-img-content {
-    position: absolute;
+.login-img-content {
     width: 552px;
     height: 139px;
-    left: 252px;
-    top: 242px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-.Login-label-login {
+.login-form label{
+    display: block;
+}
+.login-label {
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
@@ -58,101 +54,77 @@
     line-height: 27px;
     letter-spacing: 0em;
     text-align: left;
-    position: absolute;
     width: 49px;
     height: 27px;
-    left: calc(50% - 49px/2 - 139.5px);
-    top: 30px;
+    margin-bottom: 60px;
 }
-
-.Login-lewati {
-    /* form-button-skip */
-    position: absolute;
-    width: 100px;
-    height: 24px;
-    left: 130px;
-    top: 509px;
+.label-input{
+    margin-bottom: 9px;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height */
-    text-align: center;
-    /* Red */
-    color: #EF5734;
+    color: #3D3D3D;
 }
 
-.form-text-input-user {
-    position: absolute;
-    width: 320px;
-    height: 48px;
-    left: 20px;
-    top: 150px;
+.label-input-text {
+    width: 44px;
+    height: 24px;
+}
+
+.label-input-password {
+    width: 79px;
+    height: 24px;
+}
+
+.form-input{
+    display: block;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 6px;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 21px;
 }
 
-.form-text-input-password {
-    position: absolute;
-    width: 320px;
+.form-button-login {
+    width: 100%;
     height: 48px;
-    left: 20px;
-    top: 253px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    box-sizing: border-box;
-    border-radius: 6px;
-}
-
-.form-button {
-    position: absolute;
-    width: 320px;
-    height: 48px;
-    left: calc(50% - 320px/2);
-    top: 381px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    /* Gray 4 */
     color: white;
     background: #BDBDBD;
     border-radius: 6px;
+    border: 1px solid #BDBDBD;
 }
 
-.label-text-user {
-    /* form-text-email */
+.login-lewati {
     position: absolute;
-    width: 44px;
+    width: 84%;
+    bottom: 16px;
     height: 24px;
-    left: calc(50% - 44px/2 - 138px);
-    top: 117px;
-
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height */
-    /* Black */
-    color: #3D3D3D;
+    text-align: center;
+    color: #EF5734;
 }
 
-.label-text-password {
-    position: absolute;
-    width: 79px;
-    height: 24px;
-    left: calc(50% - 79px/2 - 120.5px);
-    top: 219px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height */
-    /* Black */
-    color: #3D3D3D;
+.error-message{
+    width: 100%;
+    height: 58px;
+    color: white;
+    background: black;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.error-label {
+    flex-direction: row
 }
