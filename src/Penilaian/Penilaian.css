@@ -1,0 +1,98 @@
+.container-detail {
+    /* position: absolute; */
+    /* width: 744px; */
+    /* height: 979px; */
+    /* left: 156px; */
+    /* top: 126px; */
+    margin-top: 20px;
+    /* background: #FFFFFF; */
+    border-radius: 6px;
+    padding: 0px;
+}
+
+.background-penilaian {
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin-right: 10px;
+    border-radius: 6px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.lbl-makanan-siap {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 180%;
+    /* or 43px */
+
+    text-align: center;
+
+    /* Black */
+
+    color: #3D3D3D;
+    margin-top: 70px;
+}
+
+.margin-gambar {
+    margin-top: 60px;
+}
+
+.label-text-suka {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 180%;
+    /* or 32px */
+
+    text-align: center;
+
+    /* Black */
+
+    color: #3D3D3D;
+}
+
+.margin-text {
+    margin-top: 120px;
+}
+
+.margin-penilian-kiri {
+    margin-top: 75px;
+    margin-right: 95px;
+}
+
+.margin-penilian-kanan {
+    margin-top: 75px;
+    margin-left: 95px;
+}
+
+.margin-penilian-gambar {
+    margin-top: 75px;
+    margin: 95px;
+}
+
+.form-button-peneliaian {
+    width: 320px;
+    height: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background: #EF5734;
+    border-radius: 6px;
+    border: 1px solid #EF5734;
+}
+
+.btn-penilaian {
+    margin-top: 87px;
+    margin-bottom: 114px;
+}
+
+.margin-text-icon {
+}

@@ -31,7 +31,12 @@ const Langkah = () => {
 
 
     const handleNext = () => {
+        console.log('hahaha',activeStep );
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        
+        if (activeStep === dataLangkah?.data.length - 1) {
+            navigate('/Penilaian')
+        }
     };
 
     const handleBack = () => {
@@ -84,22 +89,22 @@ const Langkah = () => {
                                     <Box sx={{ maxWidth: 800 }}>
                                         <Stepper activeStep={activeStep} orientation="vertical">
                                             {dataLangkah?.data && dataLangkah?.data.map((step, index) => (
-                                                <Step key={step.stepOrder} expanded={true}>
+                                                <Step key={step.stepOrder} expanded={true} data-cy={"item-step-"+index}>
                                                     <StepLabel
-                                                        data-cy="akar-icons:check"
+                                                        data-cy="text-step-title"
                                                         className='label-langkah'
                                                         icon={index < activeStep ? <img src={require('../asset/images/bulet.png')} /> : <img src={require('../asset/images/Ellipse.png')} />}
                                                     >
                                                         {'Step ' + step.stepOrder}
                                                     </StepLabel>
                                                     <StepContent>
-                                                        <Typography data-cy={"item-step-" + index} className="label-des">{step.description}</Typography>
+                                                        <Typography data-cy="text-step-description" className="label-des">{step.description}</Typography>
                                                         <Box sx={{ mb: 2 }}>
                                                             <div>
 
                                                                 {index == activeStep && (
                                                                     <Button
-                                                                        data-cy="button-step-done"
+                                                                        data-cy={index === dataLangkah?.data.length - 1 ? "button-serve" : "button-step-done"}
                                                                         style={{
                                                                             backgroundColor: index === dataLangkah?.data.length - 1 ? '#EF5734' : '#2BAF2B',
                                                                             borderRadius: '6px',

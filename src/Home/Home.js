@@ -6,7 +6,6 @@ import { Row } from "react-bootstrap";
 import HomeAction from "../Redux/Reducer/Home/HomeAction";
 import { useNavigate } from "react-router-dom";
 
-
 import CardList from "../Component/CardList/CardList";
 import Empty from "../Component/Empty/Empty";
 
