@@ -43,9 +43,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-.login-form label{
+.login-form label {
     display: block;
 }
+
 .login-label {
     font-family: Poppins;
     font-size: 18px;
@@ -58,7 +59,8 @@
     height: 27px;
     margin-bottom: 60px;
 }
-.label-input{
+
+.label-input {
     margin-bottom: 9px;
     font-family: 'Poppins';
     font-style: normal;
@@ -78,7 +80,7 @@
     height: 24px;
 }
 
-.form-input{
+.form-input {
     display: block;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
@@ -116,7 +118,7 @@
     color: #EF5734;
 }
 
-.error-message{
+.error-message {
     width: 100%;
     height: 58px;
     color: white;
@@ -127,4 +129,97 @@
 
 .error-label {
     flex-direction: row
+}
+
+.error-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 8px 6px 16px;
+
+    position: absolute;
+    width: 328px;
+    height: 58px;
+    left: calc(50% - 328px/2);
+    bottom: 428px;
+    margin-bottom: 23px;
+    /* flex-direction: column; */
+
+    /* 00. On Surface / High Emphasis */
+
+    background: rgba(0, 0, 0, 0.87);
+    /* 04 dp */
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-oke {
+    position: static;
+    height: 16px;
+    left: 8px;
+    right: 8px;
+    top: calc(50% - 16px/2);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+
+    /* 01. Primary/200 */
+
+    color: #BB86FC;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.dalem {
+    /* flex-direction:row; */
+    display: flex;
+    flex-direction: row;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.container-error {
+    background-color: black;
+    height: 70px;
+    align-items: center;
+    text-align: left;
+    justify-items: center;
+    padding: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    /* line-height: 16px; */
+    color: white;
+}
+
+.label-ok {
+    color: #BB86FC;
+}
+
+.label-error {
+    color: white;
+}
+
+.label-error-alert {
+    color: red;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
 }

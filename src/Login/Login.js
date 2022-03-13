@@ -1,4 +1,4 @@
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import './Login.css';
 import { useState, useEffect } from 'react';
 import { actionLogin } from '../Action/ActionLogin'
@@ -27,6 +27,7 @@ const Login = () => {
     const [countPassword, setCounPassword] = useState(0)
     const [countLogin, setCounLogin] = useState(0)
     const [countLoginLock, setCounLoginLock] = useState(0)
+    const [errorValidasi, setErrorValidasi] = useState([]);
 
 
 
@@ -116,6 +117,11 @@ const Login = () => {
         }
     }, [password, email]);
 
+    const hidePopUp = () => {
+        setError('');
+        setOpen(false);
+    }
+
     useEffect(() => {
         console.log('kakksskkss ', countLoginLock);
 
@@ -124,25 +130,43 @@ const Login = () => {
     return (
         <div className="login">
             <header className="login-header">
-                <img src={require("../asset/images/header-logo.png")} className="login-logo" data-cy="header-logo" />
+                <img src={require("../asset/images/header-logo.png")} className="login-logo" data-cy="header-logo" onClick={() => { navigate('/Home') }} />
             </header>
-            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            {/* <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }} data-cy="form-alert-container">
                     {error}
                 </Alert>
-            </Snackbar>
+            </Snackbar> */}
+
             <div className="login-container">
                 <div className="login-form">
+
                     <label className="login-label" data-cy="form-text-title">Login</label>
                     {loading && <Loading />}
 
+                    {/* <div className='error-message' data-cy="form-alert-container">
+                        <div className='dalem'>
+                        <label>hahahaha</label>
+                        <label>hahahaha</label>
+                        </div>
+                       
+                    </div> */}
+                    {open && 
+                    <Container className='container-error' data-cy="form-alert-container">
+                        <Row>
+                            <Col sm={10}><label>{error}</label></Col>
+                            <Col sm={2}><label onClick={() => {hidePopUp()}} data-cy="form-alert-button-ok" className='label-ok'>OK</label></Col>
+                        </Row>
+                    </Container> 
+                    }
                     <label className="label-input label-input-text" data-cy="form-text-email">
                         Email
                     </label>
                     <input type="email" data-cy="form-input-email" className="form-input form-input-text" value={email} onInput={(e) => setEmail(e.target.value)} />
                     <label className="label-input label-input-password" data-cy="form-text-password">Password</label>
+                    {/* <label className='label-error-alert'>{}</label> */}
                     <input type="password" className="form-input form-input-password" value={password} onInput={(e) => setPassword(e.target.value)} data-cy="form-input-password" />
-
+                    
                     <button type="submit" disabled={!buttonDisable} className="form-button-login" data-cy="form-button-login" onClick={handleLogin}>
                         Login
                     </button>

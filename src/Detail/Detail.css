@@ -1,0 +1,531 @@
+.home-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 156px;
+    flex-direction: column;
+}
+
+.home-header-top {
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.home-header-top-first {
+    display: flex;
+    align-items: center;
+    background-color: blue;
+}
+
+.home-header-top-second {
+    display: flex;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.home-header-top-first label {
+    margin: 0 10px;
+}
+
+.list-product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list-product-item {
+    width: 300px;
+    height: 300px;
+    background-color: brown;
+    margin: 10px;
+}
+
+.list-container {
+    width: 264px;
+    height: 333px;
+    left: 444px;
+    top: 263px;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
+
+/* tambahan */
+
+.header-home {
+    width: 1440px;
+    height: 177px;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    background: #FFFFFF;
+}
+
+.header-logo {
+    width: 192px;
+    height: 46px;
+    left: 156px;
+    top: 60px;
+    position: relative;
+
+}
+
+.image-back {
+    position: absolute;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: 16px;
+
+}
+
+.input-search {
+    position: absolute;
+    width: 648px;
+    height: 46px;
+    left: 372px;
+    top: 60px;
+
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.button-pencarian {
+    position: absolute;
+    width: 72px;
+    height: 46px;
+    left: 1044px;
+    top: 60px;
+
+    /* Red */
+
+    background: #EF5734;
+    border-radius: 6px;
+}
+
+.button-history {
+    width: 46px;
+    height: 46px;
+    left: 1238px;
+    top: 60px;
+
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+
+/* gabungan bootstrap */
+
+.button-src {
+    width: 72px;
+    height: 46px;
+    left: 1044px;
+    top: 60px;
+    background: #EF5734;
+    border-radius: 6px;
+}
+
+.header-baru {
+    margin-top: 50px;
+}
+
+
+/* sss */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.navbar-container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+
+.navbar-dashboard {
+    flex-direction: column;
+    align-items: unset;
+    padding: 0 156px 17px 156px;
+}
+
+.sticky-top {
+    background: #ffffff;
+}
+
+.navbar-brand {
+    margin-right: 24px;
+}
+
+input.search-input {
+    margin-right: 24px;
+    width: 648px;
+}
+
+.search-bar {
+    padding-right: 122px;
+}
+
+.search-btn {
+    background-color: #EF5734;
+    border-color: #EF5734;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.search-btn:hover {
+    background-color: #EF5734;
+    border-color: #EF5734;
+}
+
+.navbar-container-bottom {
+    display: flex;
+    margin-top: 21px;
+}
+
+.navbar-container-bottom button {
+    margin-right: 40px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #BDBDBD;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.navbar-container-bottom button:hover,
+.navbar-container-bottom button:focus {
+    color: #EF5734;
+    border-bottom: 2px solid #EF5734;
+    padding-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+}
+
+.sort-button {
+    display: flex;
+    align-items: center;
+}
+
+.urutkan-label {
+    margin-right: 24px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #3D3D3D;
+    font-size: 16px;
+}
+
+.sort-button button {
+    margin-right: 24px;
+    background-color: #ffffff;
+    border: 1px solid #EAEAEA;
+    color:
+        #898989;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+.sort-button button:hover,
+.sort-button button:focus {
+    background-color: #EF5734;
+    border-color: #EF5734;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+    border-radius: 6px;
+}
+
+.content-container {
+    background: #E5E5E5;
+    padding: 20px 156px;
+}
+
+.margin-content {
+    margin-top: 31px;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+}
+
+.bg-color {
+    background-color: #E5E5E5;
+}
+
+.unstyled-button {
+    border: none;
+}
+
+.background-header {
+    background-color: white;
+}
+
+
+.contariner-detail-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-detail {
+    /* position: absolute; */
+    /* width: 744px; */
+    /* height: 979px; */
+    /* left: 156px; */
+    /* top: 126px; */
+    margin-top: 20px;
+    /* background: #FFFFFF; */
+    border-radius: 6px;
+    padding: 0px;
+}
+
+.background-bahan {
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.background-jumlah {
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin-left: 10px;
+    height: 245px;
+    border-radius: 6px;
+}
+
+.image-detail {
+    width: 100%;
+    height: 439px;
+    z-index: 1;
+}
+
+.lbl-title {
+    /* position: absolute;
+width: 234px;
+height: 48px;
+left: 20px;
+top: 478px; */
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+
+
+    /* Black */
+
+    color: #3D3D3D;
+
+}
+
+.margin-kiri {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.vector {
+    /* left: 5.56%; */
+    margin-right: 15%;
+    margin-top: 5.56%;
+    margin-bottom: 5.56%;
+    margin-left: 5.56%;
+}
+
+.contain {
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+}
+
+.xxx {
+    left: 5.68%;
+    right: 74.62%;
+    top: 86.19%;
+    bottom: 6.01%;
+    width: 52px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 19px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 12px;
+    /* Gray 3 */
+
+    color: #828282;
+}
+
+.hr-devider {
+    border: 1px solid #EAEAEA;
+    ;
+}
+
+.item-masak {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 16px;
+    line-height: 32px;
+    /* or 32px */
+
+
+    /* Black */
+
+    color: #3D3D3D;
+}
+
+
+.lbl-bahan {
+    /* position: absolute;
+width: 234px;
+height: 48px;
+left: 20px;
+top: 478px; */
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    /* Black */
+
+    color: #3D3D3D;
+    margin-bottom: 30px;
+
+}
+
+.jumlah-porsi {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    /* Black */
+
+    color: #3D3D3D;
+}
+
+.form-input-detail {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 188px;
+    height: 48px;
+    text-align: center;
+    font-size: 28px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+
+}
+
+
+.vector-detail {
+    /* left: 5.56%; */
+    /* margin-right: 15%;
+    margin-top: 5.56%;
+    margin-bottom: 5.56%;
+    margin-left: 5.56%; */
+    margin: 0 auto;
+    height: 34px;
+    width: 34px;
+}
+
+.contain-jumlah {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    /* margin-top: 24px; */
+}
+
+.form-button-pilih {
+    width: 100%;
+    height: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background: #EF5734;
+    border-radius: 6px;
+    border: 1px solid #EF5734;
+}
+
+
+.form-button-pilih-false{
+    width: 100%;
+    height: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background: #BDBDBD;;
+    border-radius: 6px;
+    border: 1px solid #BDBDBD;;
+}
+
+.margin-kiri-pilih {
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.batas-bawah {
+    margin-top: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.container-error-detail {
+    background-color: black;
+    height: 70px;
+    align-items: center;
+    text-align: left;
+    justify-items: center;
+    padding: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    /* line-height: 16px; */
+    color: white;
+    margin-top: 20px;
+}

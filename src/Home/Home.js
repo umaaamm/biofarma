@@ -4,6 +4,7 @@ import { actionHome, actionHomeCategory, actionShort, actionSearch } from '../Ac
 import './Home.css';
 import { Row } from "react-bootstrap";
 import HomeAction from "../Redux/Reducer/Home/HomeAction";
+import { useNavigate } from "react-router-dom";
 
 
 import CardList from "../Component/CardList/CardList";
@@ -19,6 +20,9 @@ const Home = () => {
     const [inputValue, setInputValue] = useState('');
     const [dataSearch, setDataSearch] = useState([]);
     const [isSearch, setIsSearch] = useState(false);
+    const { token } = useSelector((state) => state.Login);
+    const navigate = useNavigate()
+
     const getDataCategory = async () => {
         let data = await actionHomeCategory();
         setDataCategory(data?.data);
@@ -57,7 +61,7 @@ const Home = () => {
                 {dataShort ? (
                     <Row xs={1} md={2} className="g-4">
                         {dataShort && dataShort.map((item, key) =>
-                            <CardList Title={item.name} image={item.image} deskripsi={item.name} key={key} happy={item.nReactionLike} natural={item.nReactionNeutral} sad={item.nReactionDislike} keylist={key} />
+                            <CardList Title={item.name} image={item.image} deskripsi={item.name} key={key} happy={item.nReactionLike} natural={item.nReactionNeutral} sad={item.nReactionDislike} keylist={key} handleClick={goToDetail} />
                         )}
                     </Row>
                 ) : (
@@ -67,6 +71,16 @@ const Home = () => {
         )
     }
 
+    const goToHistory = () => {
+
+        if (!token) {
+            navigate('/')
+        }
+    }
+
+    const goToDetail = (id) => {
+        navigate('/Detail/'+id);
+    }
 
     const renderFilter = () => {
         var dataAwalrender;
@@ -83,7 +97,7 @@ const Home = () => {
                     {dataAwalrender && dataAwalrender.length != 0 ? (
                         <Row xs={1} md={2} className="g-4">
                             {dataAwalrender && dataAwalrender.map((item, key) =>
-                                <CardList Title={item.name} image={item.image} deskripsi={item.name} key={key} happy={item.nReactionLike} natural={item.nReactionNeutral} sad={item.nReactionDislike} keylist={key} />
+                                <CardList Title={item.name} image={item.image} deskripsi={item.name} key={key} happy={item.nReactionLike} natural={item.nReactionNeutral} sad={item.nReactionDislike} keylist={key} handleClick={()=> {goToDetail(item.id)}} />
                             )}
 
                         </Row>
@@ -98,7 +112,7 @@ const Home = () => {
                     {dataAwalrender && dataAwalrender.length != 0 ? (
                         <Row xs={1} md={2} className="g-4">
                             {dataAwalrender && dataAwalrender.filter(item => item.recipeCategoryId === value).map((item, key) =>
-                                <CardList Title={item.name} image={item.image} deskripsi={item.name} key={key} happy={item.nReactionLike} natural={item.nReactionNeutral} sad={item.nReactionDislike} keylist={key} />
+                                <CardList Title={item.name} image={item.image} deskripsi={item.name} key={key} happy={item.nReactionLike} natural={item.nReactionNeutral} sad={item.nReactionDislike} keylist={key} handleClick={goToDetail} />
                             )}
                         </Row>
                     ) : (
@@ -115,7 +129,7 @@ const Home = () => {
     return (
         <>
 
-            <nav className="navbar navbar-dashboard navbar-light sticky-top" styles="background-color: #ffffff;">
+            <nav className="navbar navbar-dashboard navbar-light background-header" styles="background-color: #ffffff;">
                 <div className="navbar-container navbar-container-top">
                     <a className="navbar-brand" href="#">
                         <img src={require("../asset/images/header-logo.png")} alt="" className="d-inline-block align-text-top navbar-logo" data-cy="header-logo" />
@@ -124,7 +138,7 @@ const Home = () => {
                         <input className="form-control search-input" type="search" placeholder="Cari Resep" name="searchRecipe" aria-label="Cari Resep" data-cy="header-input-search" onInput={(e) => setInputValue(e.target.value)} />
                         <button className="btn search-btn" type="submit" data-cy="header-button-search">Cari</button>
                     </form>
-                    <button className="btn history" type="button" onClick={() => { }}><img src={require("../asset/images/header-button-history.png")} alt="" data-cy="header-button-history" /></button>
+                    <button className="btn history" type="button" onClick={() => { goToHistory() }}><img src={require("../asset/images/header-button-history.png")} alt="" data-cy="header-button-history" /></button>
                 </div>
                 <div className="navbar-container-bottom">
                     <button className="btn filter-all" onClick={() => { setValue('all'); setIsSearch(false) }} data-cy="category-button-0">Semua</button>
@@ -132,10 +146,19 @@ const Home = () => {
                         <button className="btn" key={key} onClick={() => { setValue(item.id); setIsSearch(false) }} data-cy={"category-button-" + key + 1}>{item.name}</button>
                     )}
                 </div>
+                <div className="navbar-container-bottom">
+                    {/* <div className="sort-button" >
+                        <div className="urutkan-label">Urutkan:</div>
+                        <button className="btn" onClick={() => { setIsShort(false) }} data-cy="button-sort-latest">Terbaru</button>
+                        <button className="btn" onClick={() => { shortData('name_asc'); setIsShort(true); setIsSearch(false) }} data-cy="button-sort-az">Urutkan A-Z</button>
+                        <button className="btn" onClick={() => { shortData('name_desc'); setIsShort(true); setIsSearch(false) }} data-cy="button-sort-za">Urutkan Z-A</button>
+                        <button className="btn" onClick={() => { shortData('like_desc'); setIsShort(true); setIsSearch(false) }} data-cy="button-sort-favorite">Urutkan Dari Paling Disukai</button>
+                    </div> */}
+                </div>
             </nav>
 
             <div className="content-container container-fluid">
-                <div className="sort-button">
+                <div className="sort-button" >
                     <div className="urutkan-label">Urutkan:</div>
                     <button className="btn" onClick={() => { setIsShort(false) }} data-cy="button-sort-latest">Terbaru</button>
                     <button className="btn" onClick={() => { shortData('name_asc'); setIsShort(true); setIsSearch(false) }} data-cy="button-sort-az">Urutkan A-Z</button>

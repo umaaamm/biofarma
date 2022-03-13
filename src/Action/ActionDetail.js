@@ -1,21 +1,15 @@
 import axios from "axios"
-import DetailAction from "../Redux/Reducer/Detail/DetailAction";
 
-export const actionDetail = () => async (dispatch) => {
+export const actionDetail = async (param) => {
     try {
-        dispatch(HomeAction.HOME_LOAD_START());
-
-        const data = await axios.get('https://fe.runner.api.devcode.biofarma.co.id/recipes');
+        const data = await axios.get('https://fe.runner.api.devcode.biofarma.co.id/recipes/'+param);
 
         if (data?.status == 200) {
-            //   return data?.data
-            dispatch(HomeAction.HOME_LOAD_SUCCESS(data?.data))
-            return;
+            return data?.data
         }
 
-        if (data?.response && data?.response.lenght > 0) {
-            // return data?.response.data
-            return dispatch(HomeAction.HOME_LOAD_ERROR(data?.response.data))
+        if (data?.response && data?.response.length > 0) {
+            return data?.response.data
         }
     } catch (err) {
         return err;

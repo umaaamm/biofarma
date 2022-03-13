@@ -1,0 +1,85 @@
+.background-langkah {
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.title-langkah {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 16px;
+}
+
+.image-back-langkah {
+    margin-top: 30px;
+    margin-left: 16px;
+}
+
+
+.langkah-masak {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    margin-left: 19px;
+    margin-top: 12px;
+
+
+    /* Black */
+
+    color: #3D3D3D;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.margin-kiri-langkah {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.label-langkah {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    /* Black */
+
+    color: #3D3D3D;
+}
+
+.label-des {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    /* or 29px */
+
+
+    color: #898989;
+}
+
+.label-sukses {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* Green */
+
+    color: #2BAF2B;
+    margin-top: 20px;
+}

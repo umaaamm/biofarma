@@ -254,3 +254,15 @@ body, html {
     margin: 0;
     background-color: #E5E5E5;
 }
+
+.bg-color {
+    background-color: #E5E5E5;
+}
+
+.unstyled-button {
+    border:none;
+}
+
+.background-header {
+    background-color: white;
+}
