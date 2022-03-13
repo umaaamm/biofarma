@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/biofarma/static/css/main.54658a37.css",
-    "main.js": "/biofarma/static/js/main.0301f60e.js",
+    "main.css": "/biofarma/static/css/main.f0d5542d.css",
+    "main.js": "/biofarma/static/js/main.efc38e7a.js",
     "static/js/787.7f973b9f.chunk.js": "/biofarma/static/js/787.7f973b9f.chunk.js",
     "static/media/list-image-empty.png": "/biofarma/static/media/list-image-empty.e3b65be565ce702be2cc.png",
     "static/media/content-logo.png": "/biofarma/static/media/content-logo.e2d369fc5c9d411ff88c.png",
     "index.html": "/biofarma/index.html",
-    "main.54658a37.css.map": "/biofarma/static/css/main.54658a37.css.map",
-    "main.0301f60e.js.map": "/biofarma/static/js/main.0301f60e.js.map",
+    "main.f0d5542d.css.map": "/biofarma/static/css/main.f0d5542d.css.map",
+    "main.efc38e7a.js.map": "/biofarma/static/js/main.efc38e7a.js.map",
     "787.7f973b9f.chunk.js.map": "/biofarma/static/js/787.7f973b9f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54658a37.css",
-    "static/js/main.0301f60e.js"
+    "static/css/main.f0d5542d.css",
+    "static/js/main.efc38e7a.js"
   ]
 }
